@@ -42,6 +42,7 @@ model Sold {
   productID  Int
   client     Client  @relation("client", fields: [clientCell], references: [cell])
   clientCell String
+  valueSold  Float
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
