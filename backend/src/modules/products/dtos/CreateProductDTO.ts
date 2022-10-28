@@ -1,6 +1,6 @@
 export interface CreateProductDTO {
     name: string
-    descrption: string
+    description: string
     size: number
     model: string
 }

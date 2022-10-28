@@ -24,14 +24,14 @@ model Client {
 }
 
 model Product {
-  name       String
-  descrption String
-  id         Int      @id @default(autoincrement())
-  size       Int
-  model      String
-  created_at DateTime @default(now())
-  updated_at DateTime @updatedAt
-  Sold       Sold[]   @relation("product")
+  name        String
+  description String
+  id          Int      @id @default(autoincrement())
+  size        Int
+  model       String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+  Sold        Sold[]   @relation("product")
 
   @@map("products")
 }
