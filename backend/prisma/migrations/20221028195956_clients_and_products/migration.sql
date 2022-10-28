@@ -29,6 +29,7 @@ CREATE TABLE "sold" (
     "id" SERIAL NOT NULL,
     "productID" INTEGER NOT NULL,
     "clientCell" TEXT NOT NULL,
+    "valueSold" DOUBLE PRECISION NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
 
