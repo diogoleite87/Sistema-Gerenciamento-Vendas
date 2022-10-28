@@ -1,10 +1,10 @@
 -- CreateTable
 CREATE TABLE "clients" (
-    "cpf" INTEGER NOT NULL,
+    "cpf" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "cell" TEXT NOT NULL,
     "name" TEXT NOT NULL,
-    "endereco" TEXT NOT NULL,
+    "address" TEXT NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
 
