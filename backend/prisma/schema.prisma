@@ -37,12 +37,12 @@ model Product {
 }
 
 model Sold {
-  id         Int     @id @default(autoincrement())
-  product    Product @relation("product", fields: [productID], references: [id])
-  productID  Int
-  client     Client  @relation("client", fields: [clientCell], references: [cell])
-  clientCell String
-  valueSold  Float
+  id          Int     @id @default(autoincrement())
+  product     Product @relation("product", fields: [product_id], references: [id])
+  product_id  Int
+  client      Client  @relation("client", fields: [client_cell], references: [cell])
+  client_cell String
+  value_sold  Float
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt

@@ -7,19 +7,19 @@ export class CreateProductSoldUseCase {
 
         const productExists = await prisma.product.findUnique({
             where: {
-                id: data.productID
+                id: data.product_id
             }
         });
 
         const clientExists = await prisma.client.findUnique({
             where: {
-                cell: data.clientCell
+                cell: data.client_cell
             }
         })
 
         const productAlreadySold = await prisma.sold.findFirst({
             where: {
-                productID: data.productID
+                product_id: data.product_id
             }
         })
 
