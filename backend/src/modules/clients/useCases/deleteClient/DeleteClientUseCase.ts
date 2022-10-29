@@ -21,11 +21,11 @@ export class DeleteClientUseCase {
             await prisma.sold.updateMany({
 
                 where: {
-                    clientCell: cell
+                    client_cell: cell
                 },
 
                 data: {
-                    clientCell: '00000000000'
+                    client_cell: '00000000000'
                 }
             })
         }
