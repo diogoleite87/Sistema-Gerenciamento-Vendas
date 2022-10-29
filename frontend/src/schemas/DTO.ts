@@ -14,6 +14,7 @@ export interface CreateProductSoldDTO {
 export interface CreateClientDTO {
     cpf: string
     email: string
+    name: string
     cell: string
     address: string
 }
