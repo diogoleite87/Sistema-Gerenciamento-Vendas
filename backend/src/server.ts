@@ -4,9 +4,10 @@ import { routes } from './routes';
 import { AppError } from "./errors/AppError";
 
 const app = express()
+var cors = require('cors')
 
 app.use(express.json())
-
+app.use(cors())
 app.use(routes);
 
 app.use((err: Error, request: Request, response: Response, next: NextFunction) => {
