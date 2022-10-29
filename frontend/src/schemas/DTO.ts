@@ -10,3 +10,10 @@ export interface CreateProductSoldDTO {
     client_cell: string
     value_sold: number
 }
+
+export interface CreateClientDTO {
+    cpf: string
+    email: string
+    cell: string
+    address: string
+}
