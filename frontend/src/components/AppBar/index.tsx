@@ -4,6 +4,7 @@ import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
 import { useNavigate } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
+import ButtonCreateClientDialog from "../../components/CreateClientDialog/ButtonCreateClientDialog"
 
 interface AppBarProps {
     open?: boolean
@@ -57,6 +58,8 @@ export function AppBar({ open, toggleDrawer }: AppBarProps) {
                 >
                     {'PK STORE'}
                 </Typography>
+
+                <ButtonCreateClientDialog />
 
             </Toolbar>
         </AppBarSetup>
