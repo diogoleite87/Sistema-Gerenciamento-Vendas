@@ -9,6 +9,7 @@ export type Product = {
 }
 
 export type Client = {
+    id: number
     cpf: string;
     email: string;
     cell: string;
