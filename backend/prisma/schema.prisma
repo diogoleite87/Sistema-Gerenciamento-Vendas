@@ -11,6 +11,7 @@ datasource db {
 }
 
 model Client {
+  id         Int      @default(autoincrement())
   cpf        String
   email      String
   cell       String   @id
