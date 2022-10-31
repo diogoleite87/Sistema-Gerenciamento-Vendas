@@ -4,6 +4,8 @@ export type Product = {
     id: number;
     size: number;
     model: string;
+    value: number;
+    color: string;
     created_at: Date;
     updated_at: Date;
 }
