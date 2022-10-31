@@ -16,7 +16,7 @@ import { useEffect, useState } from 'react';
 import { SoldService } from "../../services/SoldService";
 
 interface Column {
-    id: 'id' | 'name' | 'model' | 'size' | 'description' | 'created_at' | 'actions';
+    id: 'id' | 'name' | 'model' | 'size' | 'color' | 'value' | 'description' | 'created_at' | 'actions';
     label: string;
     minWidth?: number;
     align?: 'right' | 'center';
@@ -38,6 +38,18 @@ const columns: readonly Column[] = [
     {
         id: 'size',
         label: 'Tamanho',
+        minWidth: 100,
+        align: 'center'
+    },
+    {
+        id: 'color',
+        label: 'Cor',
+        minWidth: 100,
+        align: 'center'
+    },
+    {
+        id: 'value',
+        label: 'Valor',
         minWidth: 100,
         align: 'center'
     },
@@ -150,6 +162,12 @@ export default function TableProducts({ type }: ITableProducts) {
                                         </TableCell>
                                         <TableCell align='center'>
                                             {product.size}
+                                        </TableCell >
+                                        <TableCell align='center'>
+                                            {product.color}
+                                        </TableCell>
+                                        <TableCell align='center'>
+                                            R${product.value}
                                         </TableCell>
                                         <TableCell>
                                             {product.description}
