@@ -1,5 +1,6 @@
 -- CreateTable
 CREATE TABLE "clients" (
+    "id" SERIAL NOT NULL,
     "cpf" TEXT NOT NULL,
     "email" TEXT NOT NULL,
     "cell" TEXT NOT NULL,
@@ -18,6 +19,8 @@ CREATE TABLE "products" (
     "id" SERIAL NOT NULL,
     "size" INTEGER NOT NULL,
     "model" TEXT NOT NULL,
+    "color" TEXT NOT NULL,
+    "value" DOUBLE PRECISION NOT NULL,
     "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updated_at" TIMESTAMP(3) NOT NULL,
 

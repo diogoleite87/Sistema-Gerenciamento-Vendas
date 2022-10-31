@@ -3,4 +3,6 @@ export interface CreateProductDTO {
     description: string
     size: number
     model: string
+    value: number
+    color: string
 }
