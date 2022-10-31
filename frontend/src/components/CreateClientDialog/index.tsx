@@ -39,14 +39,6 @@ export default function CreateClientDialog({
     const [address, setAddress] = useState<string>("");
     const [name, setName] = useState<string>("");
 
-    function formatDate(date: Date) {
-        var date = new Date(date)
-        var day = date.getDate().toString().padStart(2, '0')
-        var month = (date.getMonth() + 1).toString().padStart(2, '0')
-        var year = date.getFullYear()
-        return year + "-" + month + "-" + day;
-    }
-
     async function createClient() {
 
         setAlertLoading(true)
