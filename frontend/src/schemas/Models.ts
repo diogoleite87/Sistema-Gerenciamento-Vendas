@@ -20,3 +20,12 @@ export type Client = {
     created_at: Date;
     updated_at: Date;
 }
+
+export type GroupProducts = {
+    name: string
+    model: string
+    color: string
+    size: number
+    valuesum: number
+    count: number
+}
