@@ -1,12 +1,13 @@
 import { DashboardContainer } from "../../components/DashBoard/ContentContainer"
 import { DashboardContentContainer } from "../../components/DashBoard/Container"
+import HomeContent from '../../components/HomeContent'
 
 export default function Home() {
 
     return (
         <DashboardContainer>
             <DashboardContentContainer>
-                <h1>Home Page</h1>
+                <HomeContent />
             </DashboardContentContainer>
         </DashboardContainer>
     )
