@@ -17,6 +17,7 @@ import MessageIcon from '@mui/icons-material/Message';
 import EditClientDialog from '../EditClientDialog';
 import DeleteConfirmDialog from '../DeleteConfirmDialog';
 import { Alert, Snackbar } from '@mui/material';
+import InfoClientDialog from '../InfoClientDialog';
 
 
 export default function DataGridClients() {
@@ -26,10 +27,12 @@ export default function DataGridClients() {
     const [clientCellEdit, setClientCellEdit] = useState<string>("")
     const [deleteConfirm, setDeleteConfirm] = useState<boolean>(false)
     const [cellDelete, setCellDelete] = useState<string>("")
-    const [deleteSuccess, setDeleteSuccess] = useState<boolean>(true);
+    const [deleteSuccess, setDeleteSuccess] = useState<boolean>(false);
     const [deleteErr, setDeleteErr] = useState<boolean>(false);
     const [editClientSuccess, setEditClientSuccess] = useState<boolean>(false);
-    const [editClientErr, setEditClientErr] = useState<boolean>(false)
+    const [editClientErr, setEditClientErr] = useState<boolean>(false);
+    const [openInfoClientDialog, setOpenIndoClientDialog] = useState<boolean>(false);
+    const [cellClientInfo, setCellClientInfo] = useState<string>("");
 
     useEffect(() => {
 
@@ -49,10 +52,16 @@ export default function DataGridClients() {
         setDeleteConfirm(true)
     }
 
+    const infoClient = (cell: string) => {
+        setCellClientInfo(cell)
+        setOpenIndoClientDialog(true)
+    }
+
     return (
         <>
             <EditClientDialog state={openEditDialogClient} setState={setOpenEditDialogClient} cellClient={clientCellEdit} setEditClientSuccess={setEditClientSuccess} setEditClientErr={setEditClientErr} />
             <DeleteConfirmDialog state={deleteConfirm} setState={setDeleteConfirm} cell={cellDelete} setDeleteSuccess={setDeleteSuccess} setDeleteErr={setDeleteErr} />
+            <InfoClientDialog state={openInfoClientDialog} setState={setOpenIndoClientDialog} cell={cellClientInfo} />
 
             <Snackbar open={deleteSuccess} autoHideDuration={5000} onClose={() => setDeleteSuccess(false)}>
                 <Alert onClose={() => setDeleteSuccess(false)} severity="success" sx={{ width: '100%' }}>
@@ -99,7 +108,13 @@ export default function DataGridClients() {
                                 <TableCell align="left">{clients.cell}</TableCell>
                                 <TableCell align="left">{clients.name}</TableCell>
                                 <TableCell align="center">
-                                    <Button variant="contained" component="label" color="primary"><InfoIcon /></Button>
+                                    <IconButton
+                                        sx={{}}
+                                        color='primary'
+                                        onClick={() => infoClient(clients.cell)}
+                                    >
+                                        <InfoIcon />
+                                    </IconButton>
                                 </TableCell>
                                 <TableCell align="center">
 
