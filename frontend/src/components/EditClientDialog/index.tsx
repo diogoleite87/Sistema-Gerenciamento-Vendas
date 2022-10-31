@@ -15,8 +15,8 @@ import { useEffect, useState } from 'react'
 
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-import Alert from '@mui/material/Alert';
 import { ClientService } from '../../services/ClientService'
+import { formatDate } from '../../utils/formatter'
 
 export interface BasicDialogProps {
     state: boolean
@@ -172,10 +172,10 @@ export default function EditClientDialog({
 
                         <Box sx={{ width: '50%' }}>
                             <Typography>
-                                Data Criação:
+                                Data Criação: {formatDate(createdAt)}
                             </Typography>
                             <Typography>
-                                Ultima Modificação:
+                                Ultima Modificação: {formatDate(updatedAt)}
                             </Typography>
                         </Box>
 
