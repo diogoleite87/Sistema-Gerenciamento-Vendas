@@ -12,8 +12,6 @@ export class CreateMakerUseCase {
             }
         })
 
-        console.log(makerAreadyExists)
-
         if (makerAreadyExists) {
             throw new AppError("Maker already exists!")
         }
