@@ -7,13 +7,11 @@ import { GetAllMakersController } from "../modules/Makers/useCases/getAllMakers/
 const getAllMakersController = new GetAllMakersController();
 const createMakerController = new CreateMakerController();
 const deleteMakerController = new DeleteMakerController();
-const createVariationController = new CreateVariationController();
 
 const makerRoutes = Router();
 
 makerRoutes.get('/', getAllMakersController.handle);
 makerRoutes.post('/:name', createMakerController.handle);
 makerRoutes.delete('/:name', deleteMakerController.handle);
-makerRoutes.post('/variations/:nameMaker/:nameVariation', createVariationController.handle);
 
 export { makerRoutes }
