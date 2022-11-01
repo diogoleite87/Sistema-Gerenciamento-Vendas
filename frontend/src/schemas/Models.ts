@@ -29,3 +29,14 @@ export type GroupProducts = {
     valuesum: number
     count: number
 }
+
+export type Variation = {
+    id: number;
+    name: string;
+    maker_name: string;
+}
+
+export type Maker = {
+    id: number;
+    name: string;
+}
