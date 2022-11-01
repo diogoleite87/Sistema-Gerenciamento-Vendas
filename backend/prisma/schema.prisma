@@ -52,3 +52,20 @@ model Sold {
 
   @@map("sold")
 }
+
+model Maker {
+  id        Int         @id @default(autoincrement())
+  name      String
+  Variation Variation[]
+
+  @@map("makers")
+}
+
+model Variation {
+  id       Int    @id @default(autoincrement())
+  name     String
+  maker    Maker  @relation(fields: [maker_id], references: [id])
+  maker_id Int
+
+  @@map("variations")
+}
