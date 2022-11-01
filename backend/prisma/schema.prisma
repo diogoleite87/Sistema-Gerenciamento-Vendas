@@ -69,3 +69,8 @@ model Variation {
 
   @@map("variations")
 }
+
+model Color {
+  id   Int    @default(autoincrement())
+  name String @id
+}
