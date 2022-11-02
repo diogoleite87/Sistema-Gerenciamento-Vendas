@@ -18,7 +18,8 @@ import EditClientDialog from '../EditClientDialog';
 import DeleteConfirmDialog from '../DeleteConfirmDialog';
 import { Alert, Snackbar } from '@mui/material';
 import InfoClientDialog from '../InfoClientDialog';
-
+import WorkHistoryIcon from '@mui/icons-material/WorkHistory';
+import HistorySoldsDialog from '../HistorySoldsDialog';
 
 export default function DataGridClients() {
 
@@ -32,7 +33,8 @@ export default function DataGridClients() {
     const [editClientSuccess, setEditClientSuccess] = useState<boolean>(false);
     const [editClientErr, setEditClientErr] = useState<boolean>(false);
     const [openInfoClientDialog, setOpenIndoClientDialog] = useState<boolean>(false);
-    const [cellClientInfo, setCellClientInfo] = useState<string>("");
+    const [cellClient, setCellClient] = useState<string>("");
+    const [openHistorySoldsDialog, setOpenHistorySoldsDialog] = useState<boolean>(false);
 
     useEffect(() => {
 
@@ -53,15 +55,21 @@ export default function DataGridClients() {
     }
 
     const infoClient = (cell: string) => {
-        setCellClientInfo(cell)
+        setCellClient(cell)
         setOpenIndoClientDialog(true)
+    }
+
+    const historySolds = (cell: string) => {
+        setCellClient(cell)
+        setOpenHistorySoldsDialog(true)
     }
 
     return (
         <>
             <EditClientDialog state={openEditDialogClient} setState={setOpenEditDialogClient} cellClient={clientCellEdit} setEditClientSuccess={setEditClientSuccess} setEditClientErr={setEditClientErr} />
             <DeleteConfirmDialog state={deleteConfirm} setState={setDeleteConfirm} cell={cellDelete} setDeleteSuccess={setDeleteSuccess} setDeleteErr={setDeleteErr} />
-            <InfoClientDialog state={openInfoClientDialog} setState={setOpenIndoClientDialog} cell={cellClientInfo} />
+            <InfoClientDialog state={openInfoClientDialog} setState={setOpenIndoClientDialog} cell={cellClient} />
+            <HistorySoldsDialog state={openHistorySoldsDialog} setState={setOpenHistorySoldsDialog} cell={cellClient} />
 
             <Snackbar open={deleteSuccess} autoHideDuration={5000} onClose={() => setDeleteSuccess(false)}>
                 <Alert onClose={() => setDeleteSuccess(false)} severity="success" sx={{ width: '100%' }}>
@@ -96,6 +104,7 @@ export default function DataGridClients() {
                             <TableCell align="left">Celular</TableCell>
                             <TableCell align="left">Nome</TableCell>
                             <TableCell align="center">Informações</TableCell>
+                            <TableCell align="center">Historico de Compras</TableCell>
                             <TableCell align="center">Ações</TableCell>
                         </TableRow>
                     </TableHead>
@@ -114,6 +123,15 @@ export default function DataGridClients() {
                                         onClick={() => infoClient(clients.cell)}
                                     >
                                         <InfoIcon />
+                                    </IconButton>
+                                </TableCell>
+                                <TableCell align="center">
+                                    <IconButton
+                                        sx={{}}
+                                        color='secondary'
+                                        onClick={() => historySolds(clients.cell)}
+                                    >
+                                        <WorkHistoryIcon />
                                     </IconButton>
                                 </TableCell>
                                 <TableCell align="center">
