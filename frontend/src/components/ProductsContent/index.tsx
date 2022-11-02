@@ -12,7 +12,7 @@ export default function ProductsContent() {
     return (
         <Box sx={{ width: '100%' }}>
 
-            <Accordion sx={{ marginTop: '5vh' }}>
+            <Accordion sx={{ marginTop: '6vh' }}>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -25,17 +25,29 @@ export default function ProductsContent() {
                 </AccordionDetails>
             </Accordion>
 
-            <Grid alignItems='center' justifyContent='center' display='flex' marginTop='4vh'>
-                <ButtonGroup variant="contained" aria-label="outlined primary button group" sx={{}}>
-                    <Button onClick={() => setType("allProductsAvaiable")}>Disponiveis</Button>
-                    <Button onClick={() => setType("allProducts")}>Todos</Button>
-                    <Button onClick={() => setType("allProductsSold")}>Vendidos</Button>
-                </ButtonGroup>
-            </Grid>
+            <Accordion sx={{}}>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <Typography>Estoque Detalhado</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Grid alignItems='center' justifyContent='center' display='flex'>
+                        <ButtonGroup variant="contained" aria-label="outlined primary button group" sx={{}}>
+                            <Button onClick={() => setType("allProductsAvaiable")}>Disponiveis</Button>
+                            <Button onClick={() => setType("allProducts")}>Todos</Button>
+                            <Button onClick={() => setType("allProductsSold")}>Vendidos</Button>
+                        </ButtonGroup>
+                    </Grid>
 
-            <Grid marginTop='3vh'>
-                <TableProducts type={type} />
-            </Grid>
+                    <Grid marginTop='3vh'>
+                        <TableProducts type={type} />
+                    </Grid>
+                </AccordionDetails>
+            </Accordion>
+
         </Box >
     )
 }
