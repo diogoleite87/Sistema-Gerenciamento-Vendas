@@ -6,6 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ButtonCreateClientDialog from "../CreateClientDialog/ButtonCreateClientDialog"
 import ButtonSoldProductDialog from '../SoldProductDialog/ButtonSoldProductDialog'
 import ButtonCreateProductDialog from '../CreateProductDialog/ButtonSoldProductDialog';
+import ButtonCreateMakerAndVariationDialog from '../CreateMakerAndVariationDialog/ButtonCreateMakerAndVariationDialog';
 
 interface AppBarProps {
     open?: boolean
@@ -64,6 +65,7 @@ export function AppBar({ open, toggleDrawer }: AppBarProps) {
                     <ButtonSoldProductDialog />
                     <ButtonCreateClientDialog />
                     <ButtonCreateProductDialog />
+                    <ButtonCreateMakerAndVariationDialog nameButton='Modelos' />
                 </Stack>
 
             </Toolbar>
