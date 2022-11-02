@@ -40,3 +40,8 @@ export type Maker = {
     id: number;
     name: string;
 }
+
+export type Color = {
+    id: number;
+    name: string;
+}
