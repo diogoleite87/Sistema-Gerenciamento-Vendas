@@ -7,4 +7,5 @@ export interface SoldsProductsDAO {
     name_client: string
     id_sold: number
     id_product: number
+    created_sold: Date
 }
