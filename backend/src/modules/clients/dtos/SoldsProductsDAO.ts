@@ -5,6 +5,7 @@ export interface SoldsProductsDAO {
     size_product: string
     value_sold: number
     name_client: string
+    cell_client: string
     id_sold: number
     id_product: number
     created_sold: Date
