@@ -1,10 +1,11 @@
-import { styled, Typography } from '@mui/material'
+import { Stack, styled, Typography } from '@mui/material'
 import MuiAppBar from '@mui/material/AppBar'
 import IconButton from '@mui/material/IconButton'
 import Toolbar from '@mui/material/Toolbar'
-import { useNavigate } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
-import ButtonCreateClientDialog from "../../components/CreateClientDialog/ButtonCreateClientDialog"
+import ButtonCreateClientDialog from "../CreateClientDialog/ButtonCreateClientDialog"
+import ButtonSoldProductDialog from '../SoldProductDialog/ButtonSoldProductDialog'
+import ButtonCreateProductDialog from '../CreateProductDialog/ButtonSoldProductDialog';
 
 interface AppBarProps {
     open?: boolean
@@ -59,7 +60,11 @@ export function AppBar({ open, toggleDrawer }: AppBarProps) {
                     {'PK STORE'}
                 </Typography>
 
-                <ButtonCreateClientDialog />
+                <Stack direction='row' spacing={2}>
+                    <ButtonSoldProductDialog />
+                    <ButtonCreateClientDialog />
+                    <ButtonCreateProductDialog />
+                </Stack>
 
             </Toolbar>
         </AppBarSetup>
