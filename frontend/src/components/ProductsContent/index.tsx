@@ -3,6 +3,9 @@ import { useState } from "react";
 import GroupProductsAvaiable from "../GroupProductsAvaiable";
 import TableProducts from "../TableProducts";
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import TableColor from "../TableColor";
+import TableMaker from "../TableMaker";
+import TableVariation from "../TableVariation";
 
 export default function ProductsContent() {
 
@@ -25,7 +28,7 @@ export default function ProductsContent() {
                 </AccordionDetails>
             </Accordion>
 
-            <Accordion sx={{}}>
+            <Accordion>
                 <AccordionSummary
                     expandIcon={<ExpandMoreIcon />}
                     aria-controls="panel1a-content"
@@ -45,6 +48,45 @@ export default function ProductsContent() {
                     <Grid marginTop='3vh'>
                         <TableProducts type={type} />
                     </Grid>
+                </AccordionDetails>
+            </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <Typography>Cores Cadastradas</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <TableColor />
+                </AccordionDetails>
+            </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <Typography>Marcas Cadastradas</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <TableMaker />
+                </AccordionDetails>
+            </Accordion>
+
+            <Accordion>
+                <AccordionSummary
+                    expandIcon={<ExpandMoreIcon />}
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
+                >
+                    <Typography>Modelos Cadastrados</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <TableVariation />
                 </AccordionDetails>
             </Accordion>
 
