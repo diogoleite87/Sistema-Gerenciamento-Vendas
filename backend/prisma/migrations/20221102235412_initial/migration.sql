@@ -56,6 +56,14 @@ CREATE TABLE "variations" (
     CONSTRAINT "variations_pkey" PRIMARY KEY ("name")
 );
 
+-- CreateTable
+CREATE TABLE "Color" (
+    "id" SERIAL NOT NULL,
+    "name" TEXT NOT NULL,
+
+    CONSTRAINT "Color_pkey" PRIMARY KEY ("name")
+);
+
 -- AddForeignKey
 ALTER TABLE "sold" ADD CONSTRAINT "sold_product_id_fkey" FOREIGN KEY ("product_id") REFERENCES "products"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
