@@ -60,7 +60,7 @@ export default function SoldProductDialog({
             setAvaiableProducts(res.data)
         })
 
-    }, [state, saveSuccess]);
+    }, [saveSuccess]);
 
     const handleChangeClient = (event: SelectChangeEvent) => {
         setClientCell(event.target.value);
@@ -73,6 +73,8 @@ export default function SoldProductDialog({
     const createProductSold = async () => {
 
         setAlertLoading(true)
+        setSaveError(false)
+        setSaveSuccess(false)
 
         SoldService.createProductSold({ product_id: Number(productId), client_cell: clientCell, value_sold: Number(valueSold) }).then(res => {
             setAlertLoading(false)
@@ -144,7 +146,6 @@ export default function SoldProductDialog({
                             >
                                 {avaiableProducts.map((product) => (
                                     <MenuItem
-                                        key={product.id}
                                         value={product.id}
                                     >
                                         {product.id} / {product.name} / {product.model} / {product.color} / {product.size}
