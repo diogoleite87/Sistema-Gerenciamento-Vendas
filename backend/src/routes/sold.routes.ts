@@ -15,6 +15,6 @@ const soldRoutes = Router();
 soldRoutes.post("/", createProductSoldController.handle)
 soldRoutes.get("/", getAllProductsSoldsController.handle)
 soldRoutes.delete("/:product_id/:client_cell", deleteProductSoldController.handle)
-soldRoutes.get('/week/:date', getSoldsOfWeekController.handle)
+soldRoutes.get('/week/:date/:count', getSoldsOfWeekController.handle)
 
 export { soldRoutes }
