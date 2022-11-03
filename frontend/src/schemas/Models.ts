@@ -58,3 +58,10 @@ export interface SoldsProductsDAO {
     id_product: number
     created_sold: Date
 }
+
+export type SoldsOfWeek = {
+
+    sumSolds: number
+    countSolds: number
+    currentDate: string
+}
