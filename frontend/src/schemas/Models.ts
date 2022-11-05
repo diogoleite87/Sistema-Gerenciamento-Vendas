@@ -65,3 +65,9 @@ export type SoldsOfWeek = {
     countSolds: number
     currentDate: string
 }
+
+export type InfoSolds = {
+
+    totalSumValueSolds: number
+    totalCountSolds: number
+}
