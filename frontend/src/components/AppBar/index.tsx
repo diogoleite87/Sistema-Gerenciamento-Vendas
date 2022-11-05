@@ -58,7 +58,7 @@ export function AppBar({ open, toggleDrawer }: AppBarProps) {
                     noWrap
                     sx={{ flexGrow: 1 }}
                 >
-                    {'PK STORE'}
+                    {'Gerenciador de Vendas'}
                 </Typography>
 
                 <Stack direction='row' spacing={2}>
