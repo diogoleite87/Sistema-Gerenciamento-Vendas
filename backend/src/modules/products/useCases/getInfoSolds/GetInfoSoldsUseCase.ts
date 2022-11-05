@@ -16,8 +16,6 @@ export class GetInfoSoldsUseCase {
 
             let jsonDayOfWeek = await prisma.$queryRawUnsafe(sql);
 
-            console.log(jsonDayOfWeek)
-
             totalSumValueSolds += jsonDayOfWeek[0].sumsolds;
             totalCountSolds += Number(jsonDayOfWeek[0].countsolds);
 
