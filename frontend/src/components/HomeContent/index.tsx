@@ -11,22 +11,18 @@ export default function HomeContent() {
 
             <Stack direction='row' spacing={2} width='100%' marginTop='4vh'>
                 <Box sx={{ width: '50%' }}>
-                    <Typography variant="h5">Total de Vendas</Typography>
+                    <Typography variant="h4">Total de Vendas</Typography>
                     <GraphicSoldsOfWeek />
                 </Box>
 
                 <Box sx={{ width: '50%' }}>
-                    <Typography variant="h5">Total em R$</Typography>
+                    <Typography variant="h4">Total em R$</Typography>
                     <GraphicValueSoldsOfWeek />
                 </Box>
 
             </Stack >
 
             <Stack direction='row' spacing={2} width='100%'>
-                <Box sx={{ width: '50%' }}>
-
-                </Box>
-
                 <Box sx={{ width: '50%' }}>
                     <HomeInfo />
                 </Box>
