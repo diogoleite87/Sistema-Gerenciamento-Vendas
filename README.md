@@ -59,7 +59,7 @@
 
 ## Tela Clientes
 
-## Na tela de clientes, será listado todos os clientes cadastrados no sistema, com a possibilidade de editar as informações do cliente, exibir essas informações, encaminhar para o WhatsApp do cliente, excluir cliente e ver histórico de compras do cliente.
+#### Na tela de clientes, será listado todos os clientes cadastrados no sistema, com a possibilidade de editar as informações do cliente, exibir essas informações, encaminhar para o WhatsApp do cliente, excluir cliente e ver histórico de compras do cliente.
 
 <img src='./img/clientPage.gif'>
 
