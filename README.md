@@ -37,7 +37,7 @@
 
 #### Selecionando a opção "Cadastrar Cliente" no canto superior direito, podemos adicionar um novo cliente e seus respectivos dados/atributos.
 
-<img src='./img/createclient.gif'>
+<img src='./img/createClient.gif'>
 
 ## Cadastrar Modelo
 
