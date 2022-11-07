@@ -55,7 +55,7 @@
 
 #### Selecionando a opção "Nova Venda" no canto superior direito, podemos efetuar a venda dos produtos disponíveis, ou seja, na qual o ID não esteja vinculado a nenhuma outra venda, selecionando o cliente, produto na qual será vendido e o valor da venda.
 
-<img src='./img/createsold.gif'>
+<img src='./img/createSold.gif'>
 
 ## Tela Clientes
 
