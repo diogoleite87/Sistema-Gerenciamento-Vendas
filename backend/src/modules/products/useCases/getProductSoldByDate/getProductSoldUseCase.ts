@@ -12,8 +12,6 @@ export class GetProductSoldByDateUseCase {
         FROM sold s, products p, clients c
         WHERE s.product_id = p.id AND c.cell = s.client_cell AND CAST (s.created_at AS Text) LIKE '${dateMoment.format('YYYY-MM-DD')}%'`
 
-        console.log(sql)
-
         const solds: ProductSoldByDateDAO[] = await prisma.$queryRawUnsafe(sql)
 
         return solds
