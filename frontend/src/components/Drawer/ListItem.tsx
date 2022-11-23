@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import HomeIcon from '@mui/icons-material/Home';
 import GroupIcon from '@mui/icons-material/Group';
 import InventoryIcon from '@mui/icons-material/Inventory';
+import TimelineIcon from '@mui/icons-material/Timeline';
 
 interface MyListItemProps {
     icon: JSX.Element
@@ -39,6 +40,11 @@ export function DrawerListItem() {
                 icon={<InventoryIcon />}
                 url="/products"
                 iconText="Produtos"
+            />
+            <MyListItem
+                icon={<TimelineIcon />}
+                url="/solds"
+                iconText="Vendas"
             />
         </List>
     )
