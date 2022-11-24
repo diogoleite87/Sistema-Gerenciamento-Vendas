@@ -49,7 +49,7 @@ export default function GroupProductsAvaiable({ state }: IGroupProductsAvaiable)
                             <TableCell align="center">{row.model}</TableCell>
                             <TableCell align="center">{row.color}</TableCell>
                             <TableCell align="center">{row.size}</TableCell>
-                            <TableCell align="center">R$ {row.valuesum.toFixed(2)}</TableCell>
+                            <TableCell align="center">R$ {row.valuesum}</TableCell>
                             <TableCell align="center">{row.count}</TableCell>
                         </TableRow>
                     ))}

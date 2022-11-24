@@ -167,7 +167,7 @@ export default function TableProducts({ type }: ITableProducts) {
                                             {product.color}
                                         </TableCell>
                                         <TableCell align='center'>
-                                            R${product.value.toFixed(2)}
+                                            R${product.value}
                                         </TableCell>
                                         <TableCell>
                                             {product.description}
