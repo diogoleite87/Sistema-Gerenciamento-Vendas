@@ -68,3 +68,9 @@
 #### Na tela de produtos, podemos listar o estoque disponível, estoque detalhado, cores cadastradas, marcas cadastradas e modelos cadastrados.
 
 <img src='./img/productPage.gif'>
+
+## Tela Vendas
+
+#### Na tela de vendas, podemos listar as vendas efetuadas de acordo com a data inserida, por padrão é data atual.
+
+<img src='./img/soldsPage.png'>
