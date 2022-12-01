@@ -25,6 +25,43 @@
     <li>Moment</li>
 </ul>
 
+# Primeiramente, vamos discutir como executar 🏃‍
+
+```bash
+# Clone este repositório
+$ git clone https://github.com/diogoleite87/Sistema-Gerenciamento-Vendas.git
+
+# Acessa a pasta do Backend no terminal
+$ cd Sistema-Gerenciamento-Vendas/backend
+
+# Instale as dependências
+$ yarn
+
+# Crie um arquivo .env, insira e edite os dados do seu usuário postgres
+.env : DATABASE_URL="postgresql://USUARIO:SENHA@localhost:5432/NOME-BD?schema=public"
+
+# Execute a migrate para gerar as tabelas automaticamente no seu postgres
+$ yarn prisma migrate dev
+
+# Execute a aplicação
+$ yarn dev
+
+# Volte para o root. O Servidor iniciará na porta padrão Node
+$ cd ..
+
+# Acesse a pasta do Frontend no terminal
+$ cd frontend
+
+# Instale as depencências
+$ yarn
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn dev
+
+# A aplicação iniciará na porta que estiver disponível em sua máquina
+
+```
+
 # Demonstração de Algumas Funcionalidades do Sistema
 
 ## Tela Inicial
